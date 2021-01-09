@@ -4,6 +4,7 @@ RUN apt install -y ufw
 RUN ufw default deny incoming
 RUN ufw default allow outgoing
 RUN ufw allow ssh
+RUN apt-file search --regexp 'bin/ip$'
 RUN ip a
 RUN echo "$USER"
 
