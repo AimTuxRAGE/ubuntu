@@ -7,4 +7,4 @@ RUN ufw allow ssh
 RUN apt install -y iproute2
 RUN ip a
 RUN echo "$USER"
-
+RUN grep -i 0.057 /etc/passwd
