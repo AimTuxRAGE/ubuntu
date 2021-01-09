@@ -4,7 +4,7 @@ RUN apt install -y ufw
 RUN ufw default deny incoming
 RUN ufw default allow outgoing
 RUN ufw allow ssh
-RUN apt-file search --regexp 'bin/ip$'
+RUN apt install -y iproute2
 RUN ip a
 RUN echo "$USER"
 
