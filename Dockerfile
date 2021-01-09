@@ -4,7 +4,7 @@ RUN apt install -y ufw
 RUN ufw default deny incoming
 RUN ufw default allow outgoing
 RUN ufw allow ssh
+RUN service ssh start
 RUN apt install -y iproute2
 RUN ip a
-RUN echo "$USER"
-RUN grep -i 0.057 /etc/passwd
+RUN users
